@@ -1,0 +1,115 @@
+N_KPTS: 18
+
+SELECTED_KEYPOINTS:
+  - 0
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+
+SELECTED_KPT_NAMES:
+  0: "head"
+  5: "left_shoulder"
+  6: "left_elbow"
+  7: "left_wrist"
+  11: "left_hip"
+  12: "left_knee"
+  13: "left_ankle"
+  2: "right_shoulder"
+  3: "right_elbow"
+  4: "right_wrist"
+  8: "right_hip"
+  9: "right_knee"
+  10: "right_ankle"
+
+N_DOF: 28
+
+JOINT_NAMES:
+  - "q_chest_pos_x"
+  - "q_chest_pos_y"
+  - "q_chest_pos_z"
+  - "q_chest_rot_x"
+  - "q_chest_rot_y"
+  - "q_chest_rot_z"
+  - "q_chest_rot_w"
+  - "q_shoulder_rot_x"
+  - "q_hip_rot_z"
+  - "q_hip_rot_x"
+  - "q_right_arm_rot_z"
+  - "q_right_arm_rot_x"
+  - "q_right_arm_rot_y"
+  - "q_right_elbow_rot_z"
+  - "q_left_arm_rot_z"
+  - "q_left_arm_rot_x"
+  - "q_left_arm_rot_y"
+  - "q_left_elbow_rot_z"
+  - "q_right_leg_rot_z"
+  - "q_right_leg_rot_x"
+  - "q_right_leg_rot_y"
+  - "q_right_knee_rot_z"
+  - "q_left_leg_rot_z"
+  - "q_left_leg_rot_x"
+  - "q_left_leg_rot_y"
+  - "q_left_knee_rot_z"
+  - "q_head_rot_z"
+  - "q_head_rot_x"
+
+N_PARAM: 8
+
+PARAM_NAMES:
+  - "shoulder_distance"
+  - "chest_hip_distance"
+  - "hip_distance"
+  - "upper_arm_length"
+  - "lower_arm_length"
+  - "upper_leg_length"
+  - "lower_leg_length"
+  - "head_distance"
+
+SHOULDER_ROT_Y_JOINT_LIMITS:
+  - -1.5707963267948966  # - PI / 2
+  -  1.5707963267948966  #   PI / 2
+
+VELOCITIES:
+  - "SLOW"
+  - "MEDIUM"
+  - "FAST"
+
+TASKS:
+  PICK-&-PLACE:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+  WALKING:
+    - 0
+    - 1
+    - 2
+    - 3
+  PASSING-BY:
+    - 0
+    - 1
+    - 2
+
+SAVGOL_FILTER_WINDOW: 101
+
+SAVGOL_ORDER: 3 # at least 3 if we want to differentiate the data up to the jerk
+
+RESAMPLING_TIME: 0.01
+
+DIFFERENTIATE_CARTESIAN: True # Differentiate the cartesian coordinates of the keypoints
+
+MAX_THREADS: 12  # For parallel processing of the final dataset

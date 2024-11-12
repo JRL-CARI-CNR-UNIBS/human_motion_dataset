@@ -1,0 +1,8 @@
+# Ignore the .vscode folder (Visual Studio Code settings)
+.vscode
+
+# Ignore the __pycache__ folder (Python bytecode cache)
+/__pycache__
+
+# Ignore all files in the data subfolders, but not the subfolders themselves
+/data/*/*
